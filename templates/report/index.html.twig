@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block title %}Most popular books{% endblock %}
+{% block body %}
+<h1>The most popular books</h1>
+<table class="table table-striped">
+<tr>
+<th>Title</th>
+<th>Borrowed</th>
+</tr>
+{% for book in books %}
+<tr><td>{{ book.title }}</td><td>{{ book.howMany}}</td></tr>
+{% endfor %}
+</table>
+{% endblock %}

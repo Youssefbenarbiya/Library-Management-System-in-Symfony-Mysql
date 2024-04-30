@@ -1,0 +1,18 @@
+{{ form_start(form) }}
+<div>
+<label for="student_name" class="form-label">
+{{ form_label(form.name) }}
+</label>
+{{ form_widget(form.name, {'attr':{'class':'form-control'}}) }}
+</div>
+<div>
+<label for="student_surname" class="form-label">
+{{ form_label(form.surname) }}
+</label>
+{{ form_widget(form.surname, {'attr':{'class':'form-control'}}) }}
+</div>
+<div>&nbsp;</div>
+<div>
+<button class="btn btn-primary">{{ button_label|default('Save') }}</button>
+</div>
+{{ form_end(form) }}
